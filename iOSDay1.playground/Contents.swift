@@ -20,6 +20,7 @@ Note: **var** defines that your creating a variable
 **"MyName"** is the string value that you will store
 
 */
+// Type code here !!!
 
 
 /*:
@@ -40,7 +41,7 @@ To be explicit we will create our variables a bit differently as an example we w
 ## Challenge two: Create 4 Variables that store a Boolean Value / an Integer Value / a Floating Point Value / and a String Value
 
 */
-
+// Type code here !!!
 
 
 
@@ -56,6 +57,8 @@ The main thing you should take away, is that if you want a variable that is **mu
 Now, you have a try at this. Create a variable that is constant. Also, try and assign a value to that variable after you have declared it. What type of error do you recieve.
 
 */
+// Type code here !!!
+
 
 
 /*:
@@ -71,6 +74,8 @@ Now, we'll look at operators. You first learned about operators in elementary sc
 * a = a * a
 
 */
+// Type code here !!!
+
 
 /*:
 
@@ -81,6 +86,8 @@ In the results pane, you'll see 10, 11, 10 and 100 respectively. Now try this:
 * b -= 10
 
 */
+// Type code here !!!
+
 
 /*:
 **+=** is an operator that means "add then assign to." In our case it means "take the current value of b, add 10 to it, then put the result back into b." As you might imagine, **-=** does the same but subtracts rather then adds. So, that code will show 10, 20, 10 in the results pane.
@@ -92,6 +99,8 @@ If you want to add or subtract 1 from a number, there are special operators just
 * --b
 
 */
+// Type code here !!!
+
 
 
 /*:
@@ -114,6 +123,7 @@ Type the following into playground and see the result.
 * c < 4
 
 */
+// Type code here !!!
 
 
 /*:
@@ -141,6 +151,8 @@ var name = "Your Name"
 * var latitude = 36.166667
 
 "Your name is \(name), your age is \(age), and your latitude is \(latitude)"
+
+[Helpful resourses on String and Characters should be read before continuing.](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html)
 
 ## Challenge 3
 * Create a variable of type string for your name 
