@@ -164,4 +164,57 @@ var name = "Your Name"
 
 /*:
 
+## Arrays
+
+Arrays let you group lots of values together into a single collection, then access those values by their position in the collection. Swift uses type inference to figure out what type of data your array holds, like so:
+
+* var evenNumbers = [2, 4, 6, 8]
+* var favoriteGames = ["Super Meat Boy", "Metroid", "Legend of Zelda", "Super Mario"]
+
+[Helpful resourses on Collection Types should be read before continuing.](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html)
+
+Have a go. Create an Array that stores the names of your family members.
+*/
+
+
+/*:
+
+Swift uses brackets to mark the start and end of an array, and each item in the array is separated with a comma.
+
+When it comes to reading items out an array, there's a catch: Swift starts counting at 0. 
+
+This means the first item is 0, the second item is 1, the third is 2, and so on. 
+So as an example this would look like the following.
+
+* var favoriteGames = ["Super Meat Boy", "Metroid", "Legend of Zelda", "Super Mario"]
+* favoriteGames[0]
+* favoriteGames[1]
+* favoriteGames[2]
+
+*/
+
+
+/*:
+
+## Creating arrays
+
+If you make an array using the syntax shown above, Swift creates the array and fills it with the values we specified. Things aren't quite so straightforward if you want to create the array then fill it later – this syntax doesn't work:
+
+* var game: [String]
+* game[0] = "Fly or Die"
+
+Have a good and try this code in Playgrounds **NOTE** remember to delete this code after this is only to show the error.
+*/
+
+
+/*:
+
+Put simply, writing var game: [String] tells Swift "the game variable will hold an array of strings," 
+but it doesn't actually create that array. It doesn't allocate any memory, or do any of the work to actually create
+a Swift array. It just says that at some point there will be an array, and it will hold strings.
+
+There are a few ways to express this correctly, and the one that probably makes most sense at this time is this:
+
+* var game: [String] = []
+
 */
