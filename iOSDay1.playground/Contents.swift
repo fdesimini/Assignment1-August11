@@ -88,7 +88,6 @@ In the results pane, you'll see 10, 11, 10 and 100 respectively. Now try this:
 */
 // Type code here !!!
 
-
 /*:
 **+=** is an operator that means "add then assign to." In our case it means "take the current value of b, add 10 to it, then put the result back into b." As you might imagine, **-=** does the same but subtracts rather then adds. So, that code will show 10, 20, 10 in the results pane.
 
@@ -235,16 +234,17 @@ You can also use += to add and assign, like this:
 
 bothGameLists += ["Grand Theft Auto 5"]
 
-Have a go. Create two distinct arrays in of Type string. The data can be anything you want. e.i favorite books / songs / recipes. Combine the two using **+** and store the results in a new **array**
+Have a go. Create two distinct arrays in of Type string. The data can be anything you want. e.i favorite books / songs / recipes. Combine the two using **+** and store the results in a new **array** as with the example above add a new entry to the combined array.
 
 */
 
 // Type code here !!!
 
+
 /*:
 ## Dictionaries
 
-Swift arrays are a collection where you access each item using a numerical index, such as songs[0]. 
+Swift arrays are a collection where you access each item using a numerical index, such as games[0]. 
 Dictionaries are another common type of collection, but they differ from arrays because they let you access values based on a key you specify.
 
 [Helpful resourses on Dictionaries should be read before continuing.](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html#//apple_ref/doc/uid/TP40014097-CH8-ID113)
@@ -288,4 +288,67 @@ Have a go. Create a Dictionary with your first / middle / last names the month y
 
 ## Conditional Statements
 
+Sometimes you want code to execute only if a certain condition is true, and in Swift that is represented primarily by the if and else statements. You give Swift a condition to check, then a block of code to execute if that condition is true.
+
+You can optionally also write else and provide a block of code to execute if the condition is false, or even else if and have more conditions. A "block" of code is just a chunk of code marked with an open brace – { – at its start and a close brace – } – at its end.
+
+[Helpful resourses on Control Flow should be read before continuing.](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ControlFlow.html#//apple_ref/doc/uid/TP40014097-CH9-ID120)
+
+Here's a basic example:
+
+* var action: String
+* var person = "hater"
+
+* if person == "hater" {
+* action = "hate"
+* }
+
+That uses the == (equality) operator introduced previously to check whether the string inside person is exactly equivalent to the srting "hater". If it is, it sets the action variable to "hate". Note that open and close braces, also known by their less technical name of "curly brackets" – that marks the start and end of the code that will be executed if the condition is true.
+
+Let's add else if and else blocks:
+
+* var action: String
+* var person = "hater"
+
+* if person == "hater" {
+* action = "hate"
+* } else if person == "player" {
+* action = "play"
+* } else {
+* action = "cruise"
+* }
+
+That will check each condition in order, and only one of the blocks will be executed: a person is either a hater, a player, or anything else.
+
+Evaluating multiple conditions
+You can ask Swift to evaluate as many conditions as you want, but they all need to be true in order for Swift to execute the block of code. To check multiple conditions, use the && operator – it means "and". For example:
+
+* var action: String
+* var stayOutTooLate = true
+* var nothingInBrain = true
+
+* if stayOutTooLate && nothingInBrain {
+* action = "cruise"
+* }
+
+Because stayOutTooLate and nothingInBrain are both true, the whole condition is true, and action gets set to "cruise." 
+
+Swift uses something called short-circuit evaluation to boost performance: if it is evaluating multiple things that all need to be true, and the first one is false, it doesn't even both evaluating the rest.
+
+Looking for the opposite of truth
+This might sound deeply philosophical, but actually this is important: sometimes you care whether a condition is not true, i.e. is false. You can do this with the ! (not) operator that was introduced earlier. For example:
+
+* if !stayOutTooLate && !nothingInBrain {
+* action = "cruise"
+* }
+
+This time, the action variable will only be set if both stayOutTooLate and nothingInBrain are false – the ! has flipped them around.
+
+Have a go. Write some code that will detect if two values are the same. If they are the same have the program print out **"They are the same"** also add and **else** clause for that if they are not equal if prints **"The are not the same"**
+*/
+
+
+/*:
+
+Congratulations on completing Day One's Assignment. Now that you're finished upload you assignment to your Git Account.
 */
