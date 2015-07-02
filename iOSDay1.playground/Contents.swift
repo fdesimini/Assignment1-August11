@@ -160,7 +160,7 @@ var name = "Your Name"
 * using string interpolation print both of these in the same line.
 
 */
-
+// Type code here !!!
 
 /*:
 
@@ -175,7 +175,7 @@ Arrays let you group lots of values together into a single collection, then acce
 
 Have a go. Create an Array that stores the names of your family members.
 */
-
+// Type code here !!!
 
 /*:
 
@@ -192,7 +192,7 @@ So as an example this would look like the following.
 * favoriteGames[2]
 
 */
-
+// Type code here !!!
 
 /*:
 
@@ -205,7 +205,7 @@ If you make an array using the syntax shown above, Swift creates the array and f
 
 Have a good and try this code in Playgrounds **NOTE** remember to delete this code after this is only to show the error.
 */
-
+// Type code here !!!
 
 /*:
 
@@ -216,5 +216,76 @@ a Swift array. It just says that at some point there will be an array, and it wi
 There are a few ways to express this correctly, and the one that probably makes most sense at this time is this:
 
 * var game: [String] = []
+
+Have a go. Try this in your playground and notice an empty collection.
+
+*/
+// Type code here !!!
+
+/*:
+## Array Operators
+
+You can use a limited set of operators on arrays. For example, you can merge two arrays by using the + operator, like this:
+
+* var gameList1 = ["Doom", "Braid", "Grand Theft Auto 1969"]
+* var gameList2 = ["Donkey Kong Tropical Freeze", "Roblox", "NHL 2005"]
+* var bothGameLists = gameList1 + gameList2
+
+You can also use += to add and assign, like this:
+
+bothGameLists += ["Grand Theft Auto 5"]
+
+Have a go. Create two distinct arrays in of Type string. The data can be anything you want. e.i favorite books / songs / recipes. Combine the two using **+** and store the results in a new **array**
+
+*/
+
+// Type code here !!!
+
+/*:
+## Dictionaries
+
+Swift arrays are a collection where you access each item using a numerical index, such as songs[0]. 
+Dictionaries are another common type of collection, but they differ from arrays because they let you access values based on a key you specify.
+
+[Helpful resourses on Dictionaries should be read before continuing.](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html#//apple_ref/doc/uid/TP40014097-CH8-ID113)
+
+To give you an example, let's imagine how we might store data about a person in an array:
+
+* var person = ["Kwame", "Charlton", "Bryan", "June", "3einteractive.com"]
+
+To read out that person's middle name, we'd use person[1], and to read out the month they were born we'd use person[3]. This has a few problems, not least that it's difficult to remember what index number is assigned to each value in the array! And what happens if the person has no middle name? Chances are all the other values would move down one place, causing chaos in your code.
+
+With dictionaries we can re-write this to be far more sensible, because rather than arbitrary numbers you get to read and write values using a key you specify. For example:
+
+* var person = ["first": "Kwame", "middle": "Charlton", "last": "Bryan", "month": "June", "website": "3einteractive.com"]
+* person["middle"]
+* person["month"]
+
+It might help if I use lots of whitespace to break up the dictionary on your screen, like this:
+
+* var person = [
+* "first": "Kwame",
+* "middle": "Charlton",
+* "last": "Bryan",
+* "month": "June",
+* "website": "3einteractive.com"
+* ]
+
+* person["middle"]
+* person["month"]
+
+As you can see, when you make a dictionary you write its key, then a colon, then its value. You can then read any value from the dictionary just by knowing its key, which is much easier to work with.
+
+As with arrays, you can store a wide variety of values inside dictionaries, although the keys are most commonly strings.
+
+Have a go. Create a Dictionary with your first / middle / last names the month you were born and your website. If you don't have a website just make one up.
+
+*/
+
+
+
+/*:
+
+## Conditional Statements
 
 */
