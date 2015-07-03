@@ -38,7 +38,8 @@ To be explicit we will create our variables a bit differently as an example we w
 
 [Helpful resourses on Data Types should be read before continuing.](https://developer.apple.com/library/mac/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html)
 
-## Challenge two: Create 4 Variables that store a Boolean Value / an Integer Value / a Floating Point Value / and a String Value
+## Challenge Two: 
+Create 4 Variables that store a Boolean Value / an Integer Value / a Floating Point Value / and a String Value
 
 */
 // Type code here !!!
@@ -161,6 +162,7 @@ var name = "Your Name"
 */
 // Type code here !!!
 
+
 /*:
 
 ## Arrays
@@ -220,6 +222,7 @@ Have a go. Try this in your playground and notice an empty collection.
 
 */
 // Type code here !!!
+
 
 /*:
 ## Array Operators
@@ -331,7 +334,7 @@ You can ask Swift to evaluate as many conditions as you want, but they all need 
 * action = "cruise"
 * }
 
-Because stayOutTooLate and nothingInBrain are both true, the whole condition is true, and action gets set to "cruise." 
+Because **stayOutTooLate** and **nothingInBrain** are both true, the whole condition is true, and action gets set to "cruise."
 
 Swift uses something called short-circuit evaluation to boost performance: if it is evaluating multiple things that all need to be true, and the first one is false, it doesn't even both evaluating the rest.
 
@@ -349,6 +352,107 @@ Have a go. Write some code that will detect if two values are the same. If they 
 
 
 /*:
+## Loops
 
-Congratulations on completing Day One's Assignment. Now that you're finished upload you assignment to your Git Account.
+Computers are great at doing a million operations in the time it took you to read this. When it comes to repeating tasks in code, you can either copy and paste your code multiple times (DONT DO IT), or you can use loops (DO IT) – simple programming constructs that repeat a block of code for as long as a condition is true.
+[Helpful resourses on Loops in Swift should be read before continuing.](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ControlFlow.html#//apple_ref/doc/uid/TP40014097-CH9-ID121)
+To demonstrate this lets look at the following code snippet. The very uncool way of doing a loop.
+
+
+* println("1 x 10 is \(1 * 10)")
+* println("2 x 10 is \(2 * 10)")
+* println("3 x 10 is \(3 * 10)")
+* println("4 x 10 is \(4 * 10)")
+* println("5 x 10 is \(5 * 10)")
+* println("6 x 10 is \(6 * 10)")
+* println("7 x 10 is \(7 * 10)")
+* println("8 x 10 is \(8 * 10)")
+* println("9 x 10 is \(9 * 10)")
+* println("10 x 10 is \(10 * 10)")
+
+
+When it has finished running, you'll have the 10 times table in your playground results pane. But it's hardly efficient code, and in fact a much cleaner way is to loop over a range of numbers using what's called the **closed range operator**, which is three periods in a row: ...
+
+Using the *closed range operator*, we could re-write that whole thing in three lines:
+
+
+* for i in 1...10 {
+* println("\(i) x 10 is \(i * 10)")
+* }
+
+### Have a go. Create a Loop that prints 0 to 99
+
 */
+
+/*:
+## Looping over arrays
+
+Swift provides a very simple way to loop over all the elements in an array. Because Swift already knows what kind of data your array holds, it will go through every element in the array, assign it to a constant you name, then run a block of your code. For example, we could print out a list of great songs like this:
+
+* var games = ["Doom", "Braid", "Grand Theft Auto 1969"]
+* for song in games {
+* println("My favorite game is \(game)")
+* }
+
+Have a go create a array of your favorite things. Make your array size atleast 10 entries. Then use the for in construct to iterate over the collection of your favorite things.
+*/
+
+/*:
+
+You can also use the for i in loop construct to loop through arrays, because you can use that constant to index into an array. We could even use it to index into two arrays, like this:
+
+* var team = ["Toronto Raptors", "Toronto Maple Leafs", "Toronto Football Club", "Toronto Rock"]
+* var sport = ["Basketball", "Hockey", "Soccer", "Lacrosse"]
+
+* for i in 0 ... 3 {
+* println("\(team[i]) play \(sport[i])")
+* }
+
+Have a go. Create two arrays match a person with a specific action.
+*/
+
+/*:
+
+## Inner loops
+
+You can put loops inside loops if you want, and even loops inside loops inside loops – although you might suddenly find you're doing something 10 million times, so be careful!
+
+We can combine two of our previous loops to create this:
+
+* var team = ["Toronto Raptors", "Toronto Maple Leafs", "Toronto Football Club", "Toronto Rock"]
+* var sport = ["Basketball", "Hockey", "Soccer", "Lacrosse"]
+
+* for i in 0 ..< count(team) {
+* var str = "\(team[i]) play"
+
+* for _ in 1 ... 5 {
+* str += " \(sport[i])"
+* }
+* println(str)
+* }
+
+*/
+
+/*:
+
+## While loops
+There's a third kind of loop you'll see, which repeats a block of code until you tell it to stop. This is used for things like game loops where you have no idea in advance how long the game will last – you just keep repeating "check for touches, animate robots, draw screen, check for touches…" and so on, until eventually the user taps a button to exit the game and go back to the main menu.
+
+These loops are called while loops, and they look like this:
+
+* var counter = 0
+* while true {
+* println("Counter is now \(counter)")
+* ++counter
+* if counter == 556 {
+* break
+* }
+* }
+
+That code introduces a new keyword, called *break*. It's used to exit a while or for loop at a point you decide. Without it, the code above would never end because the condition to check is just "true", and true is always true. Without that break statement the loop is an infinite loop, which is A Bad Thing.
+
+These while loops work best when you're using unknown data, such as downloading things from the internet, reading from a file such as JSON. This is because you only know when to stop the loop after you've run it a sufficient number of times.
+
+Have a go. Create a while loop that stops when a value has reached 100. Make sure to print this out on success.
+*/
+
