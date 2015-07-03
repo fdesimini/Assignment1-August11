@@ -174,7 +174,7 @@ Arrays let you group lots of values together into a single collection, then acce
 
 [Helpful resourses on Collection Types should be read before continuing.](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html)
 
-Have a go. Create an Array that stores the names of your family members.
+### Have a go. Create an Array that stores the names of your family members.
 */
 // Type code here !!!
 
@@ -204,7 +204,7 @@ If you make an array using the syntax shown above, Swift creates the array and f
 * var game: [String]
 * game[0] = "Fly or Die"
 
-Have a good and try this code in Playgrounds **NOTE** remember to delete this code after this is only to show the error.
+### Have a go and try this code in Playgrounds **NOTE** remember to delete this code after this is only to show the error.
 */
 // Type code here !!!
 
@@ -218,7 +218,7 @@ There are a few ways to express this correctly, and the one that probably makes 
 
 * var game: [String] = []
 
-Have a go. Try this in your playground and notice an empty collection.
+### Have a go. Try this in your playground and notice an empty collection.
 
 */
 // Type code here !!!
@@ -237,7 +237,7 @@ You can also use += to add and assign, like this:
 
 bothGameLists += ["Grand Theft Auto 5"]
 
-Have a go. Create two distinct arrays in of Type string. The data can be anything you want. e.i favorite books / songs / recipes. Combine the two using **+** and store the results in a new **array** as with the example above add a new entry to the combined array.
+### Have a go. Create two distinct arrays in of Type string. The data can be anything you want. e.i favorite books / songs / recipes. Combine the two using **+** and store the results in a new **array** as with the example above add a new entry to the combined array.
 
 */
 
@@ -281,10 +281,10 @@ As you can see, when you make a dictionary you write its key, then a colon, then
 
 As with arrays, you can store a wide variety of values inside dictionaries, although the keys are most commonly strings.
 
-Have a go. Create a Dictionary with your first / middle / last names the month you were born and your website. If you don't have a website just make one up.
+### Have a go. Create a Dictionary with your first / middle / last names the month you were born and your website. If you don't have a website just make one up.
 
 */
-
+// Type code here !!!
 
 
 /*:
@@ -349,7 +349,7 @@ This time, the action variable will only be set if both stayOutTooLate and nothi
 
 Have a go. Write some code that will detect if two values are the same. If they are the same have the program print out **"They are the same"** also add and **else** clause for that if they are not equal if prints **"The are not the same"**
 */
-
+// Type code here !!!
 
 /*:
 ## Loops
@@ -383,6 +383,8 @@ Using the *closed range operator*, we could re-write that whole thing in three l
 ### Have a go. Create a Loop that prints 0 to 99
 
 */
+// Type code here !!!
+
 
 /*:
 ## Looping over arrays
@@ -394,8 +396,11 @@ Swift provides a very simple way to loop over all the elements in an array. Beca
 * println("My favorite game is \(game)")
 * }
 
-Have a go create a array of your favorite things. Make your array size atleast 10 entries. Then use the for in construct to iterate over the collection of your favorite things.
+### Have a go create a array of your favorite things. Make your array size atleast 10 entries. Then use the for in construct to iterate over the collection of your favorite things.
 */
+// Type code here !!!
+
+
 
 /*:
 
@@ -408,8 +413,11 @@ You can also use the for i in loop construct to loop through arrays, because you
 * println("\(team[i]) play \(sport[i])")
 * }
 
-Have a go. Create two arrays match a person with a specific action.
+### Have a go. Create two arrays match a person with a specific action.
 */
+// Type code here !!!
+
+
 
 /*:
 
@@ -433,6 +441,10 @@ We can combine two of our previous loops to create this:
 
 */
 
+// Type code here !!!
+
+
+
 /*:
 
 ## While loops
@@ -453,6 +465,165 @@ That code introduces a new keyword, called *break*. It's used to exit a while or
 
 These while loops work best when you're using unknown data, such as downloading things from the internet, reading from a file such as JSON. This is because you only know when to stop the loop after you've run it a sufficient number of times.
 
-Have a go. Create a while loop that stops when a value has reached 100. Make sure to print this out on success.
+### Have a go. Create a while loop that stops when a value has reached 100. Make sure to print this out on success.
+*/
+// Type code here !!!
+
+
+
+/*:
+## Switch case
+
+You've seen if statements and now loops, but Swift has another type of flow control called switch/case. It's easiest to think of this as being an advanced form of if, because you can have lots of matches and Swift will execute the right one.
+
+
+Here's a basic example:
+
+* let favoriteGames = 2
+
+* switch favoriteGames {
+* case 0:
+* println("Doom")
+
+* case 1:
+* println("Super Meat Boy")
+
+* case 2:
+* println("Super Mario")
+
+* default:
+* println("Don't you have a favorite game?")
+* }
+
+We could very well have written that using lots of if and else if blocks, but this way is clearer and that's important.
+
+One advantage to switch/case is that Swift will ensure your cases are exhaustive. That is, if there's the possibility of your variable having a value you don't check for, Xcode will refuse to build your app. In situations where the values are effectively open ended, like our favoriteGames integer, you need to include a default case to catch these potential values. Yes, even if you "know" your data can only fall within a certain range.
+
+Swift can apply some evaluation to your case statements in order to match against variables. For example, if you wanted to check for a range of possible values, you could use the closed range operator like this:
+
+* let favoriteGames = 5
+
+* switch favoriteGames {
+* case 0...1:
+* println("Doom")
+
+* case 2...3:
+* println("Super Meat Boy")
+
+* case 4...5:
+* println("Super Mario Bros")
+
+* default:
+* println("Don't you have a favorite game?")
+* }
+
+One thing you should know is that switch/case blocks in Swift don't fall through like they do in some other languages you might have seen. If you're used to writing break in your case blocks, you should know this isn't needed in Swift. 
+
+### Have a go. Create a switch case statement for some of your favorite things.
+
+*/
+// Type code here !!!
+
+
+
+/*:
+## Functions
+Functions let you define re-usable pieces of code that perform specific pieces of functionality. Usually functions are able to receive some values to modify the way they work, but it's not required.
+
+[Helpful resourses on Functions in Swift should be read before continuing.](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158)
+
+Let's start with a simple function:
+
+* func favoriteGame() {
+* println("Super Meat Boy")
+* }
+
+If you put that code into your playground, nothing will be printed. And yes, it is correct. The reason nothing is printed is that we've placed the "Super Meat Boy" message into a function called favoriteGame(), and that code won't be called until we ask Swift to run the favoriteGame() method. To do that, add this line of code:
+
+* favoriteGame()
+
+That runs the function (or "calls" it), so now you'll see "Super Meat Boy" printed out.
+
+### Have a go. Create a function that prints out your first and last name
+
+*/
+// Type code here !!!
+
+
+
+/*:
+Of course, that's a ridiculous example – that function does the same thing no matter what, so there's no point it existing. But what if we wanted to print a different album each time? In that case, we could tell Swift we want our function to accept a value when it's called, then use that value inside it.
+
+Let's do that now:
+
+* func favoriteGame(game: String) {
+* println("My favourite game is \(game)")
+* }
+
+That tells Swift we want the function to accept one value (called a "parameter"), named "album", that should be a string. We then use string interpolation to write that favorite album directly into our output message.
+
+Have a go. create a function that displays your favorite thing. Taking your favorite thing as a parameter.
+
+*/
+// Type code here !!!
+
+
+
+/*:
+## Functions with mutiple parameters
+
+You can make your functions accept as many parameters as you want,
+
+* func printGameRelease(name: String, year: Int) {
+* println("\(name) was released in \(year)")
+* }
+
+* printGameRelease("Super Meat Boy", 2010)
+* printGameRelease("Speak Mario", 1985)
+* printGameRelease("Mega Man", 1987)
+
+Have a go. Create a function that accepts multiple parameters.
+
+*/
+// Type code here !!!
+
+/*:
+
+## Return values
+
+Swift functions can return a value by writing **->** then a data type. Once you do this, Swift will ensure that your function will return a value no matter what, so again this is you make a promise about what your code does.
+
+* func someGamesILike(name: String) -> Bool {
+* if name == "Metroid" { return true }
+* if name == "Super Meat Boy" { return true }
+* if name == "Super Mario" { return true }
+* if name == "Dora" { return true }
+* if name == "Doom" { return true }
+* return false
+* }
+
+You can now call that by passing the game name in and acting on the result:
+
+* if someGamesILike("Doom") {
+* println("Programmed by John Carmack")
+* } else {
+* println("Who made that?!")
+* }
+
+* if someGamesILike("Super Meat Boy") {
+* println("Programmed by Team Meat")
+* } else {
+* println("Who made that?!")
+* }
+
+
+### Have a go Create a function that as above returns a boolean value. Use if conditions to determine if the passed value is true or not. Then in an if statement use the function to determine whether the value passed is true or false.
+
 */
 
+
+/*:
+
+Congratulations on finishing day ones assignment now you can post your finished playground to gitHub.
+
+*/
