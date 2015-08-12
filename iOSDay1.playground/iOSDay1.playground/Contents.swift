@@ -21,7 +21,7 @@ Note: **var** defines that your creating a variable
 
 */
 // Type code here !!!
-
+var myName:String = "Frank Desimini"
 
 /*:
 Congratulations on creating your first variable. There's many different variables that you can create. An important concept that we must discuss is types. **Types** define the values that can be stored in a variable. A list of the most common value types that you can work with are as follows.
@@ -43,7 +43,10 @@ Create 4 Variables that store a Boolean Value / an Integer Value / a Floating Po
 
 */
 // Type code here !!!
-
+var myBooleanVar:Bool = true
+var myInt:Int = 1
+var myFloat:Float = 1.0
+var myString:String = "String"
 
 
 /*:
@@ -59,7 +62,9 @@ Now, you have a try at this. Create a variable that is constant. Also, try and a
 
 */
 // Type code here !!!
-
+let thisIsAConstant = 100
+//thisIsAConstant = 110
+//Cannot assign to 'let' value
 
 
 /*:
@@ -76,6 +81,10 @@ Now, we'll look at operators. You first learned about operators in elementary sc
 
 */
 // Type code here !!!
+var a = 10
+a = a + 1
+a = a - 1
+a = a * a
 
 
 /*:
@@ -89,6 +98,11 @@ In the results pane, you'll see 10, 11, 10 and 100 respectively. Now try this:
 */
 // Type code here !!!
 
+var b = 10
+b += 10
+b -= 10
+
+
 /*:
 **+=** is an operator that means "add then assign to." In our case it means "take the current value of b, add 10 to it, then put the result back into b." As you might imagine, **-=** does the same but subtracts rather then adds. So, that code will show 10, 20, 10 in the results pane.
 
@@ -100,8 +114,9 @@ If you want to add or subtract 1 from a number, there are special operators just
 
 */
 // Type code here !!!
-
-
+b = 10
+++b
+--b
 
 /*:
 ## Comparison operators
@@ -124,7 +139,13 @@ Type the following into playground and see the result.
 
 */
 // Type code here !!!
-
+var a1:Double = 1.1
+var b1:Double = 2.2
+var c = a + b
+c > 3
+c >= 3
+c > 4
+c < 4
 
 /*:
 ## String interpolation
@@ -161,7 +182,9 @@ var name = "Your Name"
 
 */
 // Type code here !!!
+var myAge:Int = 47
 
+println ("My name is \(myName) and I am \(myAge) years old")
 
 /*:
 
@@ -177,7 +200,7 @@ Arrays let you group lots of values together into a single collection, then acce
 ### Have a go. Create an Array that stores the names of your family members.
 */
 // Type code here !!!
-
+var myFamilyMembers = ["Alexa", "Frank", "Annileka"]
 /*:
 
 Swift uses brackets to mark the start and end of an array, and each item in the array is separated with a comma.
@@ -194,6 +217,9 @@ So as an example this would look like the following.
 
 */
 // Type code here !!!
+myFamilyMembers[0]
+myFamilyMembers[1]
+myFamilyMembers[2]
 
 /*:
 
@@ -207,7 +233,8 @@ If you make an array using the syntax shown above, Swift creates the array and f
 ### Have a go and try this code in Playgrounds **NOTE** remember to delete this code after this is only to show the error.
 */
 // Type code here !!!
-
+//var game:[String]
+//game[0] = "Fly or Die"
 /*:
 
 Put simply, writing var game: [String] tells Swift "the game variable will hold an array of strings," 
@@ -222,7 +249,7 @@ There are a few ways to express this correctly, and the one that probably makes 
 
 */
 // Type code here !!!
-
+var game:[String] = []
 
 /*:
 ## Array Operators
@@ -242,6 +269,10 @@ bothGameLists += ["Grand Theft Auto 5"]
 */
 
 // Type code here !!!
+var songList1 = ["Song1","Song2","Song3","Song4","Song5"]
+var songList2 = ["SongA","SongB","SongC","SongD","SongE"]
+var bothSongLists = songList1 + songList2
+bothSongLists += ["SongA1"]
 
 
 /*:
@@ -285,8 +316,15 @@ As with arrays, you can store a wide variety of values inside dictionaries, alth
 
 */
 // Type code here !!!
+var person = [
+    "first":"Frank",
+    "middle":"n/a",
+    "last":"Desimini",
+    "month":"December",
+    "website":"mercartto.com"
+]
 
-
+person["month"]
 /*:
 
 ## Conditional Statements
@@ -351,6 +389,15 @@ Have a go. Write some code that will detect if two values are the same. If they 
 */
 // Type code here !!!
 
+var resultStatement:String
+
+var thisValue = true
+var thisOtherValue = true
+if thisValue && thisOtherValue {
+    resultStatement = "this condition is TRUE"
+} else {
+    println("this condition is FALSE")
+}
 /*:
 ## Loops
 
@@ -384,6 +431,9 @@ Using the *closed range operator*, we could re-write that whole thing in three l
 
 */
 // Type code here !!!
+for i in 1...99 {
+    println("This is number \(i)")
+}
 
 
 /*:
@@ -399,8 +449,12 @@ Swift provides a very simple way to loop over all the elements in an array. Beca
 ### Have a go create a array of your favorite things. Make your array size atleast 10 entries. Then use the for in construct to iterate over the collection of your favorite things.
 */
 // Type code here !!!
+var favouriteThings = ["Annie","family","wine","video games","sandwiches","travelling","music","motorcycle","sour keys","bagels - montreal style"]
 
-
+for favourite in favouriteThings {
+    println("My favourite thing is \(favourite)")
+}
+    
 
 /*:
 
@@ -416,7 +470,12 @@ You can also use the for i in loop construct to loop through arrays, because you
 ### Have a go. Create two arrays match a person with a specific action.
 */
 // Type code here !!!
+var personList = ["Frank","Alexa","Annie"]
+var specificAction = ["Baseball","Hockey","Dancing"]
 
+for i in 0...2 {
+    println("\(personList[i]) likes to \(specificAction[i])")
+}
 
 
 /*:
@@ -442,7 +501,17 @@ We can combine two of our previous loops to create this:
 */
 
 // Type code here !!!
+var team = ["Toronto Rapotors","Toronto Maple Leafs","TFC","Toronto Rock"]
+var sport = ["Basketball","Hockey","Soccer","Lacrosse"]
+for i in 0 ..< count(team) {
+var newStr = "\(team[i]) play"
+    for _ in 1 ... 1 {
+        newStr += " \(sport[i])"
+    }
+println(newStr)
+}
 
+// review the documentation to find out what the 'for _ in' loop means/does
 
 
 /*:
@@ -468,7 +537,16 @@ These while loops work best when you're using unknown data, such as downloading 
 ### Have a go. Create a while loop that stops when a value has reached 100. Make sure to print this out on success.
 */
 // Type code here !!!
-
+var counter = 0
+while true {
+    println("Counter is now \(counter)")
+    ++counter
+    if counter == 100 {
+        
+        println("This is the end of the loop and the number is...\(counter)")
+        break
+    }
+}
 
 
 /*:
@@ -523,6 +601,17 @@ One thing you should know is that switch/case blocks in Swift don't fall through
 
 */
 // Type code here !!!
+let myFavouriteThings = 7
+switch myFavouriteThings {
+case 0...3:
+    println("Hello")
+case 4...7:
+    println(favouriteThings[7])
+case 8...10:
+    println("People")
+default:
+    println("You are not my favourite thing")
+}
 
 
 
@@ -549,6 +638,16 @@ That runs the function (or "calls" it), so now you'll see "Super Meat Boy" print
 */
 // Type code here !!!
 
+var firstName:String = "Frank"
+var lastName:String = "Desimini"
+
+func myNameIs(){
+    
+    println("Hellow my name is \(firstName) \(lastName)")
+    
+}
+
+myNameIs()
 
 
 /*:
@@ -566,6 +665,12 @@ Have a go. create a function that displays your favorite thing. Taking your favo
 
 */
 // Type code here !!!
+func ThisIsMyFavouriteThing(favourites:String){
+    
+    println("The \(favourites) is my favourite thing")
+}
+
+ThisIsMyFavouriteThing(favouriteThings[7])
 
 
 
@@ -586,6 +691,12 @@ Have a go. Create a function that accepts multiple parameters.
 
 */
 // Type code here !!!
+
+func theseAreMyFavouriteThings (name:String, sport:String, years:Int) {
+    println("\(name) are a \(sport) team that haven't won in \(years) years")
+}
+
+theseAreMyFavouriteThings (team[1], sport[1], 47)
 
 /*:
 
@@ -620,7 +731,22 @@ You can now call that by passing the game name in and acting on the result:
 ### Have a go Create a function that as above returns a boolean value. Use if conditions to determine if the passed value is true or not. Then in an if statement use the function to determine whether the value passed is true or false.
 
 */
+func someGamesILike(name:String) -> Bool {
+    if name == "Drake's Fortune" {
+        
+        println("Drake Rocks")
+        return true
+    }
+    if name == "Centipide" {
+        
+        println("Old School")
+        return true
+    }
+    
+    return false
+}
 
+someGamesILike("Centipide")
 
 /*:
 
